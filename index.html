@@ -9,13 +9,13 @@
 <body>
     <div class="wrapper">
         <div class="city"></div>
-        <hr class=city-time>
-        <div class="time">
-            <span class="time-span">Местное время:</span>
+        <hr>
+        <div class="time default-hidden">
+            <div class="time-span">Местное время:</div>
             <div class="time-block"></div>
         </div>
-        <hr>
-        <div class="pressure">
+        <hr class="default-hidden">
+        <div class="pressure default-hidden">
             <span class="text-pressure">Давление</span>
             <div class="descr-pressure">
                 <div class="descr-title-pressure">750</div>
@@ -25,14 +25,20 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr class="default-hidden">
+        <div class="humidity default-hidden">
+            <div class="humidity-title">Влажность</div>
+            <div class="humidity-info">30%</div>
+        </div>
+        <hr class="default-hidden">
         <div class="weather">
             <div class="image"></div>
             <div class="descr"></div>
         </div>
         <div class="temp"></div>
+        <div class="info">Подробнее&#9660;</div>
     </div>
-    <div class="timer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

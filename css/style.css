@@ -5,7 +5,7 @@
 }
 .wrapper {
     width: 200px;
-    min-height: 300px;
+    min-height: 265px;
     margin: 50px 0px 0px 75px;
     border-radius: 7px;
     border: 2px solid black;
@@ -13,6 +13,8 @@
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    padding-right: 13px;
+    padding-left: 13px;
     background-color: silver;
 }
 .city {
@@ -25,6 +27,7 @@ hr {
 }
 .time {
     text-align: center;
+    min-height: 0px;
 }
 .time-span {
     font-size: 20px;
@@ -39,6 +42,7 @@ hr {
 
 .pressure {
     min-width: 120px;
+    min-height: 0px;
 }
 .text-pressure {
     display: block;
@@ -59,7 +63,7 @@ hr {
 }
 .descr-text-pressure {
     width: 52px;
-    height: 45px;
+    min-height: 0px;
     font-size: 18px;
     display: flex;
     flex-direction: column;
@@ -70,7 +74,21 @@ hr {
 .span2-text {
     height: 23px;
 }
-
+.humidity {
+    width: 120px;
+    min-height: 0px;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.humidity-title {
+    font-size: 22px;
+    text-align: center;
+}
+.humidity-info {
+    text-align: center;
+    font-size: 35px;
+}
 .weather {
     width: 90%;
     height: 98px;
@@ -95,4 +113,16 @@ hr {
     margin-top: 5px;
     font-weight: 500;
     font-size: 44px;
+}
+.default-hidden {
+    display: none;
+}
+.info {
+    font-size: 14px;
+    opacity: .9;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.info:focus {
+    transition: all ease .3s;
 }
