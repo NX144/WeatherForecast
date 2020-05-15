@@ -7,36 +7,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="city"></div>
-        <hr>
-        <div class="time default-hidden">
-            <div class="time-span">Местное время:</div>
-            <div class="time-block"></div>
-        </div>
-        <hr class="default-hidden">
-        <div class="pressure default-hidden">
-            <span class="text-pressure">Давление</span>
-            <div class="descr-pressure">
-                <div class="descr-title-pressure">750</div>
-                <div class="descr-text-pressure">
-                    <div class="span1-text">мм</div>
-                    <div class="span2-text">рт. ст.</div>
+    <div class="block" style="background: url('nebo.jpg');">
+        <div class="wrapper-main">
+            <div class="date-day">Сегодня <span class="year"></span><span class="time"> </span></div>
+            <div class="city-weather">Погода <span class="city"></span>,<span class="country"></span></div>
+            <div class="weather">
+                <div class="weather-main">
+                    <div class="weather-block">
+                        <div class="weather-info">
+                            <div class="weather-info-descr"></div>
+                            <div class="weather-info-image"></div>
+                        </div>
+                        <div class="weather-temp"></div>
+                    </div>
+                    <div class="weather-descr">По ощущению: <span></span></div>
+                </div>
+                <div class="weather-second">
+                    <div class="weather-pressure weather-spans"><div class="img"><img src="manometer.png" alt="manometer"></div>Давление воздуха:  <span></span> <div class="weather-span">мм.рт.ст,<span class="pressure-span opacity"></span></div></div>
+                    <div class="weather-humidity weather-spans"><div class="img"><img src="humidity.png" alt="humidity"></div>Влажность воздуха:  <span></span> <div class="weather-span"><span class="humidity-span opacity"></span></div></div>
+                    <div class="weather-speed-wind weather-spans"><div class="img"><img src="up-arrow.png" alt="speed-wind"></div>Скорость ветра:  <span></span><div class="weather-span"> м/с, <span class="wind-span opacity"></span></div></div>
+                    <div class="weather-sunrise weather-spans weather-spans-ml">Восход:  <span class="span-sunrise"></span><div class="img img-sun"><img src="dawn.png" alt="sunrise"></div>    Закат:  <span class="span-sunset"></span><div class="img img-sun"><img src="sunset.png" alt="sunset"></div></div>
+                    <!-- <div class="weather-sunset weather-spans weather-spans-ml">Закат:  <span>21:14</span><div class="img img-sun"><img src="sunset.png" alt="sunset"></div></div> -->
                 </div>
             </div>
         </div>
-        <hr class="default-hidden">
-        <div class="humidity default-hidden">
-            <div class="humidity-title">Влажность</div>
-            <div class="humidity-info">30%</div>
-        </div>
-        <hr class="default-hidden">
-        <div class="weather">
-            <div class="image"></div>
-            <div class="descr"></div>
-        </div>
-        <div class="temp"></div>
-        <div class="info">Подробнее&#9660;</div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
