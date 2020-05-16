@@ -1,4 +1,4 @@
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Ufa&units=metric&appid=8cb414b6309886a3b93b59e9f1b5695b')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Los Angeles&units=metric&appid=8cb414b6309886a3b93b59e9f1b5695b')
     .then(function(resp) {
         return resp.json();
     })
@@ -18,7 +18,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Ufa&units=metric&appid=
             humidityWeather = document.querySelector('.weather-humidity > span'),    //Humidity, влажность
             weatherSpeed = document.querySelector('.weather-speed-wind >  span'),
             sunriseCity = document.querySelector('.span-sunrise'),
-            sunsetCity = document.querySelector('.span-sunset'),
+            sunsetCity = document.querySelector('.span-sunset'),A
             weatherDescrInfo = data.weather[0]['description'],
             pressureSpan = document.querySelector('.pressure-span'),
             humiditySpan = document.querySelector('.humidity-span'),
@@ -183,6 +183,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Ufa&units=metric&appid=
 
         let sunset = data.sys.sunset /* + data.timezone */ ;
         let dateset = new Date((sunset + data.timezone)*1000);
+        let datesun = new Date((sunrise + data.timezone)*1000);
         let datess = new Date((sunset + data.timezone)*1000);
         datessConditionMin = datess.getMinutes();
         if(datessConditionMin < 10 && datessConditionMin >= 0) {
@@ -196,7 +197,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Ufa&units=metric&appid=
         let dayTime6 = data.dt;
         let dateTime = new Date((dayTime6 + data.timezone)*1000);
         let datesrConditionTime = dateTime.getUTCHours();
-        if(datesrConditionTime >= dateset.getUTCHours()){
+        if(datesrConditionTime >= dateset.getUTCHours() || datesrConditionTime >= 0 && datesrConditionTime < datesun.getUTCHours()){
             document.querySelector(".block").setAttribute("style", "background: url('nebo-night.jpg') center center / cover no-repeat;");
         } else {
             document.querySelector(".block").setAttribute("style", "background: url('nebo.jpg') center center / cover no-repeat;");
